@@ -7,7 +7,6 @@ import ServicesSection from "./components/ServicesSection";
 import NewsSection from "./components/NewsSection";
 import GallerySection from "./components/GallerySection";
 import ImageModal from "./components/ImageModal";
-import ContactSection from "./components/ContactSection";
 import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
 import { useScrollSpy } from "./hooks/useScrollSpy";
@@ -18,7 +17,7 @@ import { useCarousel } from "./hooks/useCarousel";
 import NewsPage from "./components/NewsPage";
 
 function MainApp() {
-  const sections = ["home", "services", "news", "gallery", "contact", "about"];
+  const sections = ["home", "services", "news", "gallery", "about"];
   const { activeSection, scrollY, setActiveSection } = useScrollSpy(sections);
   const { carouselData, loading: carouselLoading, error: carouselError } = useCarousel();
   const sliderProps = useSlider(carouselData.length);
@@ -54,7 +53,6 @@ function MainApp() {
         loading={galleryProps.loading}
         error={galleryProps.error}
       />
-      <ContactSection />
       <AboutSection />
       <Footer />
       <ImageModal 

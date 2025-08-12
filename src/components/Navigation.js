@@ -50,14 +50,6 @@ const Navigation = ({ scrollY, activeSection, setActiveSection }) => {
               <div className="link-underline"></div>
             </a>
             <a
-              href="#contact"
-              className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
-              onClick={(e) => handleNavClick('contact', e)}
-            >
-              <span className="link-text">Contact</span>
-              <div className="link-underline"></div>
-            </a>
-            <a
               href="#about"
               className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
               onClick={(e) => handleNavClick('about', e)}
